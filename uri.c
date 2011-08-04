@@ -15,7 +15,7 @@
 # /* Makefile
 
 uri: uri.c
-	gcc -Wall -ansi -o uri uri.c -DTEST
+	gcc -Wall -ansi -o uri uri.c -DURI_CODEC_TEST
 
 clean:
 	rm uri
@@ -79,7 +79,7 @@ uri_encode(char *src, char *dst, int len)
   *dst = '\0';
 }
 
-#ifdef TEST
+#ifdef URI_CODEC_TEST
 int main () {
   char a[255];
   char b[255];
